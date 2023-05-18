@@ -7,7 +7,7 @@ internal class Program
     {
         Console.WriteLine("Welcome To Basic CSharp Programs Demo 281Batch!");
         Console.WriteLine("Please choose any one Program from below option");
-        Console.WriteLine("1. Calculator\n2. Fibonacci Series\n3. Reverse a Word");
+        Console.WriteLine("1. Calculator\n2. Fibonacci Series\n3. Reverse a Word\n4. Reverse Each Word At Same Position");
         int option = Convert.ToInt32(Console.ReadLine());
         switch (option)
         {
@@ -34,6 +34,13 @@ internal class Program
                 string word = Console.ReadLine();
                 ReverseProgram.ReverseWord(word);
                 break;
+            case 4:
+                Console.WriteLine("Please Enter word");
+                word = Console.ReadLine();
+                ReverseProgram.ReverseEachWordInSamePosition(word);
+                break;
+
+
 
 
 
