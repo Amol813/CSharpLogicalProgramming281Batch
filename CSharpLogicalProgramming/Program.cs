@@ -7,7 +7,7 @@ internal class Program
     {
         Console.WriteLine("Welcome To Basic CSharp Programs Demo 281Batch!");
         Console.WriteLine("Please choose any one Program from below option");
-        Console.WriteLine("1. Calculator\n2. Fibonnoci Series");
+        Console.WriteLine("1. Calculator\n2. Fibonacci Series\n3. Reverse a Word");
         int option = Convert.ToInt32(Console.ReadLine());
         switch (option)
         {
@@ -23,6 +23,20 @@ internal class Program
                 calculator.MultiplyTwoNumbers(x, y);
                 calculator.DivideTwoNumbers(x, y);
                 break;
+            case 2:
+                Console.WriteLine("Please enter how many numbers you want to generate in the Fibonacci series");
+                int n = Convert.ToInt32(Console.ReadLine());
+                FibonacciSeries.GenerateFibonacciNumbers(n);
+                //FibonacciSeries.GenerateFibonacciNumb(n);
+                break;
+            case 3:
+                Console.WriteLine("Please Enter Any Word");
+                string word = Console.ReadLine();
+                ReverseProgram.ReverseWord(word);
+                break;
+
+
+
             default:
                 Console.WriteLine("Please choose an existing program");
                 break;
