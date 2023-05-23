@@ -8,7 +8,7 @@ internal class Program
     {
         Console.WriteLine("Welcome To Basic CSharp Programs Demo 281Batch!");
         Console.WriteLine("Please choose any one Program from below option");
-        Console.WriteLine("1. Calculator\n2. Fibonacci Series\n3. Reverse a Word\n4. Reverse Each Word At Same Position\n5.PrimeNumber");
+        Console.WriteLine("1. Calculator\n2. Fibonacci Series\n3. Reverse a Word\n4. Reverse Each Word At Same Position\n5.PrimeNumber\n6.PerfectNumber");
         int option = Convert.ToInt32(Console.ReadLine());
         switch (option)
         {
@@ -52,6 +52,20 @@ internal class Program
                 else
                 {
                     Console.WriteLine(primeInput + " is not a prime number.");
+                }
+                break;
+            case 6:
+                PerfectNumber perf = new PerfectNumber();
+                Console.Write("Enter a number to check if it's a perfect number: ");
+                int input = Convert.ToInt32(Console.ReadLine());
+                bool isPerfect = perf.IsPerfectNumber(input);
+                if (isPerfect)
+                {
+                    Console.WriteLine(input + " is a perfect number.");
+                }
+                else
+                {
+                    Console.WriteLine(input + " is not a perfect number.");
                 }
                 break;
 
