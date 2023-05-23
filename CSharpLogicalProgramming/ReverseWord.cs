@@ -18,5 +18,10 @@ namespace BasicCSharpProgramsDemo281Batch_
             }
             Console.WriteLine(reverse);
         }
+
+        internal static void ReverseEachWordInSamePosition(string? word)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
