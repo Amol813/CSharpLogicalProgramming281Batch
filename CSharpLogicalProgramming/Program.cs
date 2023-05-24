@@ -1,4 +1,5 @@
 ﻿using BasicCSharpProgramsDemo281Batch_;
+using CsharpLogicalProgramming;
 using System;
 
 internal class Program
@@ -7,7 +8,8 @@ internal class Program
     {
         Console.WriteLine("Welcome To Basic CSharp Programs Demo 281Batch!");
         Console.WriteLine("Please choose any one Program from below option");
-        Console.WriteLine("1. Calculator\n2. Fibonacci Series\n3. Reverse a Word\n4. Reverse Each Word At Same Position");
+        Console.WriteLine("1. Calculator\n2. Fibonacci Series\n3. Reverse a Word\n4. Reverse Each Word At Same Position\n5.PrimeNumber" +
+            "\n6.PerfectNumber\n7.CouponNumber");
         int option = Convert.ToInt32(Console.ReadLine());
         switch (option)
         {
@@ -39,9 +41,42 @@ internal class Program
                 word = Console.ReadLine();
                 ReverseProgram.ReverseEachWordInSamePosition(word);
                 break;
+            case 5:
+                PrimeNumber prime = new PrimeNumber();
+                Console.Write("Enter a number to check if it's a prime number: ");
+                int primeInput = Convert.ToInt32(Console.ReadLine());
+                bool isPrime = prime.IsPrimeNumber(primeInput);
+                if (isPrime)
+                {
+                    Console.WriteLine(primeInput + " is a prime number.");
+                }
+                else
+                {
+                    Console.WriteLine(primeInput + " is not a prime number.");
+                }
+                break;
+            case 6:
+                PerfectNumber perf = new PerfectNumber();
+                Console.Write("Enter a number to check if it's a perfect number: ");
+                int input = Convert.ToInt32(Console.ReadLine());
+                bool isPerfect = perf.IsPerfectNumber(input);
+                if (isPerfect)
+                {
+                    Console.WriteLine(input + " is a perfect number.");
+                }
+                else
+                {
+                    Console.WriteLine(input + " is not a perfect number.");
+                }
+                break;
 
-
-
+            case 7:
+                CouponNumber coupon = new CouponNumber();
+                Console.Write("Enter the value for the coupon number: ");
+                int couponInput = Convert.ToInt32(Console.ReadLine());
+                int couponNumber = coupon.Distinctcoupon(couponInput);
+                Console.WriteLine("Coupon Number: " + couponNumber);
+                break;
 
 
             default:
