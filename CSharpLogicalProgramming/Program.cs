@@ -8,7 +8,8 @@ internal class Program
     {
         Console.WriteLine("Welcome To Basic CSharp Programs Demo 281Batch!");
         Console.WriteLine("Please choose any one Program from below option");
-        Console.WriteLine("1. Calculator\n2. Fibonacci Series\n3. Reverse a Word\n4. Reverse Each Word At Same Position\n5.PrimeNumber\n6.PerfectNumber");
+        Console.WriteLine("1. Calculator\n2. Fibonacci Series\n3. Reverse a Word\n4. Reverse Each Word At Same Position\n5.PrimeNumber" +
+            "\n6.PerfectNumber\n7.CouponNumber");
         int option = Convert.ToInt32(Console.ReadLine());
         switch (option)
         {
@@ -68,6 +69,15 @@ internal class Program
                     Console.WriteLine(input + " is not a perfect number.");
                 }
                 break;
+
+            case 7:
+                CouponNumber coupon = new CouponNumber();
+                Console.Write("Enter the value for the coupon number: ");
+                int couponInput = Convert.ToInt32(Console.ReadLine());
+                int couponNumber = coupon.Distinctcoupon(couponInput);
+                Console.WriteLine("Coupon Number: " + couponNumber);
+                break;
+
 
             default:
                 Console.WriteLine("Please choose an existing program");
